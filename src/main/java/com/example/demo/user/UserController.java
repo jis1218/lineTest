@@ -22,4 +22,10 @@ public class UserController {
     return this.userService.findAll().stream()
       .map(UserDto::new).collect(Collectors.toList());
   }
+
+  @GetMapping
+  public List<UserDto> getAll2() {
+    return this.userService.findAll().stream()
+            .map(UserDto::new).collect(Collectors.toList());
+  }
 }
